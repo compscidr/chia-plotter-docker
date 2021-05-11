@@ -1,0 +1,12 @@
+version: '2.3'
+services:
+  chia-plotter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: compscidr/chia-plotter:dev
+    container_name: chia-plotter
+    user: "${UID}:${GID}"
+    volumes:
+      - ~/.ssh/id_rsa:/home/plotuser/.ssh/id_rsa
+      - ~/.ssh/config:/home/plotuser/.ssh/config
