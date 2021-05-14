@@ -8,5 +8,4 @@ services:
     container_name: chia-plotter
     user: "${UID}:${GID}"
     volumes:
-      - ~/.ssh/id_rsa:/home/plotuser/.ssh/id_rsa
-      - ~/.ssh/config:/home/plotuser/.ssh/config
+      - ~/.ssh:/home/plotuser/.ssh
