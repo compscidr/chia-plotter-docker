@@ -31,7 +31,7 @@ RUN git clone https://github.com/Chia-Network/chia-blockchain.git \
 
 FROM build as app
 RUN groupadd -g $GID $UNAME && useradd -m -u $UID -g $GID -s /bin/bash $UNAME && mkdir -p /home/$UNAME/.ssh && touch /home/$UNAME/.ssh/known_hosts && chown -R $UNAME:$UNAME /home/$UNAME
-USER $UNAME
+USER $UID:$GID
 WORKDIR /chia-blockchain
 ADD ./plot-and-sync.sh plot-and-sync.sh
 RUN . ./activate && chia init

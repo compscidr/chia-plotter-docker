@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     image: compscidr/chia-plotter:dev
     container_name: chia-plotter
-    user: "${UID}:${GID}"
+    user: plotuser
     volumes:
       - ~/.ssh:/home/plotuser/.ssh
