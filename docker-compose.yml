@@ -7,4 +7,4 @@ services:
     image: compscidr/chia-plotter:dev
     container_name: chia-plotter
     volumes:
-      - ~/.ssh:/home/plotuser/.ssh
+      - ~/.ssh:/root/.ssh
