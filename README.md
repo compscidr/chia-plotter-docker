@@ -16,8 +16,13 @@ Host myhost.host.com
   User someuser
   IdentityFile: ~/.ssh/id_rsa
 ```
+On the machine where the plots are stored, the corresponding key would be in
+the authorized_keys file.
+
 From the host you should be able to do `ssh myhost.host.com` without using a
 password if this is setup correctly.
+
+https://hub.docker.com/repository/docker/compscidr/chia-plotter-docker
 
 ## Running:
 From dockerhub:
