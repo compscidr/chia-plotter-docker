@@ -1,0 +1,12 @@
+name: Build container
+on:
+  push:
+
+jobs:
+  build:
+    name: Build container
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: build image
+        run: docker build -f Dockerfile -t chia-plotter-docker:${{ github.sha }} .
