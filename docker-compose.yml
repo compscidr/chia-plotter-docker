@@ -13,3 +13,5 @@ services:
       - POOL_KEY=b1eec16b3a2ce1d15937f0c076995a42a9c5435730d4d28010febc75075a392f6919d167c278095b10153cec9a9ec77f
       - SYNC_HOST=home.jasonernst.com
       - SYNC_PATH=/plots
+      - TEMPDIR=/tmp
+      - PLOTDIR=/plots
